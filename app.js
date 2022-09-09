@@ -7,7 +7,6 @@ app.set('view engine', 'ejs')
 app.get('/', (req,res)=>{
     res.render('index',{
         name : "Yahya",
-        title:"Web yahya"
     })
 })
 app.get('/about', (req,res)=>{
@@ -31,7 +30,6 @@ app.get('/contact', (req,res)=>{
 app.get('/product/:id', (req,res)=>{
     const id = req.params.id
     const category = req.query.category
-    // res.send(`product id: ${id} <br> category id: ${category}`)
     res.render('product.ejs', category)
 })
 
